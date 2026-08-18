@@ -1,6 +1,17 @@
 # n0ding Lab
 
-Private vertical prototype testing whether Bench and Dispatch can share compatible event/replay infrastructure without sharing domain vocabulary. It is intentionally not a public release or a production-readiness claim.
+[![CI](https://github.com/HN-Tran/n0ding-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/HN-Tran/n0ding-lab/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+![Status](https://img.shields.io/badge/status-superseded-lightgrey)
+
+> **Superseded reference prototype.** This repository is retained as read-only
+> design history. Active development continues independently in
+> [n0ding Bench](https://github.com/HN-Tran/n0ding-bench) and
+> [n0ding Dispatch](https://github.com/HN-Tran/n0ding-dispatch).
+
+n0ding Lab tested whether Bench and Dispatch could share compatible event/replay
+infrastructure without sharing domain vocabulary. It is not a release or a
+production-readiness claim.
 
 ```bash
 go test ./...
@@ -24,3 +35,8 @@ The import verifies size, manifest, event checksum, run scope, and normalized pr
 Automated tests cover SQLite restart recovery, pre-persistence redaction, separate databases, SSE resume, mode isolation, authenticated APIs, deterministic Bench scoring/comparison, Dispatch approval binding, idempotency, fencing, `outcome_unknown`, and replay tamper detection.
 
 This remains a vertical prototype. It does not claim tamper-proof storage, exactly-once distributed execution, sandboxing, intelligent routing, full remote-model reproducibility, multi-user isolation, or production readiness.
+
+The repository is licensed under [Apache-2.0](LICENSE). It is archived and does
+not accept feature contributions. Security findings that also affect an active
+project should be reported privately in that project's **Report a vulnerability**
+flow.
